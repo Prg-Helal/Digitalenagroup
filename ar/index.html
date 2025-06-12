@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitalena</title>
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="alternate" href="index-en.html" hreflang="en" />
+    <link rel="alternate" href="index-ar.html" hreflang="ar" />
+
+</head>
+
+<body>
+
+    <span class="up-icon-conatiner" id="scrollTop">
+        <i class="fa-solid fa-chevron-up up-icon"></i>
+    </span>
+
+    <header class="header animate" data-animate="animate-slide-down">
+        <div class="logo-container">
+            <img src="/assets/images/Digitalena-logo.png" alt="Digitalena Logo" class="img-logo">
+        </div>
+
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav class="navbar">
+            <ul class="links">
+                <a href="#homeSection" class="nav-link active-link" data-translate="home">الرئيسيه</a>
+                <a href="#aboutSection" class="nav-link" data-translate="about">من نحن</a>
+                <a href="#servicesSection" class="nav-link" data-translate="services">خدماتنا</a>
+                <a href="#contactSection" class="nav-link" data-translate="contact">اتصل بنا</a>
+                <a href="#contactSection" class="nav-link" data-translate="blogs">المدونه</a>
+            </ul>
+
+            <div class="language-switcher">
+                <a href="#" class="lang-btn active">AR</a>
+                <a href="/en/index.html" class="lang-btn  ">EN</a>
+                <i class="fa fa-globe global-icon" aria-hidden="true" onclick="toggleLanguageMenu()"></i>
+            </div>
+
+        </nav>
+
+        </div>
+
+    </header>
+
+    <main class="home-section animate" data-animate="animate-slide-top" id="homeSection">
+        <video autoplay muted loop playsinline class="bg-video" poster="/assets/images/posters/home-page.png">
+            <source src="/assets/images/home-background.mp4" type="video/mp4">
+        </video>
+    </main>
+
+    <section class="Statistics-section">
+
+        <div class="Statistics-card animate" data-animate="animate-slide-left">
+
+            <i class="fa-solid fa-magnifying-glass-dollar Statistics-icon"></i>
+
+            <div class="statistics-counter">
+                <span class="statistics-num" data-goal="70">0</span>
+                <span>%</span>
+            </div>
+
+            <div class="statistics-content">
+                <h6 data-translate="statistics_card1" data-translate-html>
+                    <span>أكثر من 70٪ من الشركات الصغيرة</span> التي تستثمر في التسويق الرقمي تشهد زيادة ملحوظة في الوعي
+                    بالعلامة التجارية خلال السنة الأولى.
+                </h6>
+            </div>
+
+        </div>
+
+        <div class="Statistics-card animate" data-animate="animate-slide-right">
+
+            <i class="fa-solid fa-heart Statistics-icon"></i>
+
+            <div class="statistics-counter">
+                <span class="statistics-num" data-goal="60">0</span>
+                <span>%</span>
+            </div>
+
+            <div class="statistics-content">
+                <h6 data-translate="statistics_card2" data-translate-html>
+                    <span>أكثر من 60٪ من الأشخاص</span> يشعرون بولاء أكبر للعلامات التجارية التي تقدم محتوى عالي الجودة.
+                </h6>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="about-section" id="aboutSection">
+
+        <h1 class="animate title rtl-target " data-animate="animate-slide-top">عن
+            ديچيتالينا
+        </h1>
+
+        <div class="content animate" data-animate="animate-slide-top">
+
+            <div class="about-card animate" data-animate="animate-slide-top">
+                <h2 class="about-subtitle">رسالتنا</h2>
+                <p data-translate="about_text">
+                    نحن <strong>وكالة رائدة في التسويق الرقمي</strong>، نمزج بين <strong>الإبداع</strong>
+                    و<strong>الاستراتيجية المبنية على البيانات</strong> لنساعد <strong>العلامات التجارية</strong> على
+                    <strong>النمو</strong>، وجذب الجمهور، وتحقيق <strong>نجاح رقمي مستدام</strong>.
+            </div>
+
+            <div class="about-card animate" data-animate="animate-slide-top">
+                <h2 class="about-subtitle">رؤيتنا</h2>
+                <p>
+                    نحن نطمح لأن نكون <strong>القوة المحركة لعالم التسويق الرقمي في الشرق الأوسط</strong>، والوجهة
+                    الأولى لأكبر العلامات التجارية العالمية — نغذي العالم بـ<strong>إبداع لا حدود له</strong> ونلهمه
+                    بنبض مستمر من <strong>التميّز الرقمي</strong>.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="services-section animate" id="servicesSection" data-animate="animate-slide-top">
+
+        <h1 class="animate title" data-animate="animate-slide-top" data-translate="services_title">
+            خدماتنا
+        </h1>
+
+        <div class="search-bar animate" data-animate="animate-slide-top">
+            <i class="fa fa-search icon"></i>
+            <input placeholder="ابحث عن خدمتك" type="search" class="input">
+        </div>
+
+        <div class="services-container swiper">
+            <div class="swiper-wrapper" id="services-list">
+                <!-- Arabic Service Cards -->
+                <article class="swiper-slide service-card">
+                    <div class="card-background">
+                        <video autoplay muted loop playsinline class="card-background"
+                            poster="/assets/images/posters/social-media.png" title="خدمة إدارة السوشيال ميديا">
+                            <source src="/assets/images/services/social-media.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="card-data">
+                        <h3 class="card-name">السوشيال ميديا</h3>
+                        <p class="card-description">
+                            <strong>إدارة احترافية لحسابات التواصل الاجتماعي</strong> مع <em>إنشاء محتوى إبداعي</em>
+                            يعزز تفاعل الجمهور ويعكس هوية علامتك التجارية.
+                        </p>
+                        <a href="/services/social-media" class="card-button" data-id="1"
+                            title="تفاصيل خدمة السوشيال ميديا">اعرف المزيد</a>
+                    </div>
+                </article>
+
+                <article class="swiper-slide service-card">
+                    <div class="card-background">
+                        <video autoplay muted loop playsinline class="card-background"
+                            poster="/assets/images/posters/media-buying.png" title="خدمة الإعلانات المدفوعة">
+                            <source src="/assets/images/services/media-buying.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="card-data">
+                        <h3 class="card-name">شراء الإعلانات</h3>
+                        <p class="card-description">
+                            <strong>حملات إعلانية مدفوعة</strong> تستهدف الجمهور المناسب وتحقق <em>أقصى عائد على
+                                الاستثمار</em> من خلال استراتيجيات ذكية.
+                        </p>
+                        <a href="/services/media-buying" class="card-button" data-id="2"
+                            title="تفاصيل خدمة شراء الإعلانات">اعرف المزيد</a>
+                    </div>
+                </article>
+
+                <article class="swiper-slide service-card">
+                    <div class="card-background">
+                        <video autoplay muted loop playsinline class="card-background"
+                            poster="/assets/images/posters/SEO-SEM.png" title="خدمة تحسين محركات البحث">
+                            <source src="/assets/images/services/SEO-SEM.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="card-data">
+                        <h3 class="card-name">تحسين محركات البحث</h3>
+                        <p class="card-description">
+                            <strong>تحسين الظهور في نتائج البحث</strong> المجانية والمدفوعة لزيادة عدد الزوار وتحقيق نمو
+                            مستدام لأعمالك.
+                        </p>
+                        <a href="/services/seo-sem" class="card-button" data-id="3"
+                            title="تفاصيل خدمة تحسين محركات البحث">اعرف المزيد</a>
+                    </div>
+                </article>
+
+                <article class="swiper-slide service-card">
+                    <div class="card-background">
+                        <video autoplay muted loop playsinline class="card-background"
+                            poster="/assets/images/posters/Media-Production.png" title="خدمة الإنتاج الإعلامي">
+                            <source src="/assets/images/services/Media-Production.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="card-data">
+                        <h3 class="card-name">الإنتاج الإعلامي</h3>
+                        <p class="card-description">
+                            <strong>إنتاج فيديوهات وصور احترافية</strong> تعكس هوية علامتك وتُبرزها بشكل جذاب وفعّال.
+                        </p>
+                        <a href="/services/media-production" class="card-button" data-id="4"
+                            title="تفاصيل خدمة الإنتاج الإعلامي">اعرف المزيد</a>
+                    </div>
+                </article>
+
+                <article class="swiper-slide service-card">
+                    <div class="card-background">
+                        <video autoplay muted loop playsinline class="card-background"
+                            poster="/assets/images/posters/websits.png" title="خدمة تصميم المواقع">
+                            <source src="/assets/images/services/websits.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="card-data">
+                        <h3 class="card-name">تصميم المواقع</h3>
+                        <p class="card-description">
+                            <strong>تصميم وتطوير مواقع إلكترونية</strong> سريعة، متجاوبة، ومهيّأة لمحركات البحث لتجربة
+                            مستخدم مثالية.
+                        </p>
+                        <a href="/services/websites" class="card-button" data-id="5"
+                            title="تفاصيل خدمة تصميم المواقع">اعرف المزيد</a>
+                    </div>
+                </article>
+
+                <article class="swiper-slide service-card">
+                    <div class="card-background">
+                        <video autoplay muted loop playsinline class="card-background"
+                            poster="/assets/images/posters/mobile-apps.png" title="خدمة تطوير تطبيقات الموبايل">
+                            <source src="/assets/images/services/mobile-apps.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="card-data">
+                        <h3 class="card-name">تطبيقات الموبايل</h3>
+                        <p class="card-description">
+                            <strong>تطوير تطبيقات موبايل عالية الأداء</strong> لأجهزة Android وiOS باستخدام أحدث
+                            التقنيات وتجربة مستخدم متقدمة.
+                        </p>
+                        <a href="/services/mobile-apps" class="card-button" data-id="6"
+                            title="تفاصيل خدمة تطوير التطبيقات">اعرف المزيد</a>
+                    </div>
+                </article>
+
+                <article class="swiper-slide service-card">
+                    <div class="card-background">
+                        <video autoplay muted loop playsinline class="card-background"
+                            poster="/assets/images/posters/CGI.png" title="خدمة الرسوم ثلاثية الأبعاد CGI">
+                            <source src="/assets/images/services/CGI.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="card-data">
+                        <h3 class="card-name">الرسوم ثلاثية الأبعاد</h3>
+                        <p class="card-description">
+                            <strong>تصميم مشاهد ثلاثية الأبعاد واقعية</strong> باستخدام أحدث تقنيات CGI لتصوير المنتجات
+                            والعروض.
+                        </p>
+                        <a href="/services/cgi" class="card-button" data-id="7" title="تفاصيل خدمة CGI">اعرف المزيد</a>
+                    </div>
+                </article>
+
+                <article class="swiper-slide service-card">
+                    <div class="card-background">
+                        <video autoplay muted loop playsinline class="card-background"
+                            poster="/assets/images/posters/2D-3D.png" title="خدمة التحريك الثنائي والثلاثي الأبعاد">
+                            <source src="/assets/images/services/2D-3D.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="card-data">
+                        <h3 class="card-name">تحريك ثنائي وثلاثي الأبعاد</h3>
+                        <p class="card-description">
+                            <strong>رسوم متحركة ثنائية وثلاثية الأبعاد</strong> لعرض المنتجات والخدمات بطريقة جذابة
+                            تحفّز العملاء.
+                        </p>
+                        <a href="/services/2d-3d-animation" class="card-button" data-id="8"
+                            title="تفاصيل خدمة الرسوم المتحركة">اعرف المزيد</a>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="swiper-button-prev">
+            <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="swiper-button-next">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="swiper-pagination"></div>
+
+    </section>
+
+    <div class="overlay" id="service-overlay">
+        <div class="content-container">
+            <div class="content-img">
+                <video autoplay muted loop playsinl id="overlay-video">
+                </video>
+            </div>
+            <div class="content-text">
+                <h1 id="overlay-title">
+                </h1>
+                <p id="overlay-details"></p>
+            </div>
+            <button class="btn-close" id="overlay-close-btn">
+                ×
+            </button>
+        </div>
+
+    </div>
+
+    <section class="contact-section rtl-target" id="contactSection">
+
+        <h1 data-translate="contact_us">اتصل بنا</h1>
+
+
+        <div class="contact-container animate" data-animate="animate-slide-top">
+            <div class="social-media card-stlye">
+                <h1 data-translate="get_in_touch"><strong>تواصل معنا</strong></h1>
+                <div class="data-group animate" data-animate="animate-slide-top">
+                    <i class="fa fa-phone icon-style"></i>
+                    <div class="content-group">
+                        <p data-translate="phone_label"><strong>رقم الهاتف</strong></p>
+                        <p>01067876296
+                            <span class="copy-button" data-text="+20 106 787 6296">
+                                <i class="copy-icon fas fa-copy"> </i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="data-group animate" data-animate="animate-slide-top">
+                    <i class="fa fa-envelope icon-style"></i>
+                    <div class="content-group">
+                        <p data-translate="email_label"><strong>البريد الإلكتروني</strong></p>
+                        <p data-text="Digitalenaagency@gmail.com">Digitalenaagency@gmail.com<span class="copy-button"
+                                data-text="Digitalenaagency@gmail.com"><i class="copy-icon fas fa-copy"></i></span></p>
+                    </div>
+                </div>
+
+                <div class="data-group animate" data-animate="animate-slide-top">
+                    <i class="fa fa-map-marker icon-style"></i>
+                    <div class="content-group">
+                        <p data-translate="location_label"><strong>الموقع</strong></p>
+                        <p data-text="عدمون فريمن، عزبة سعد، سيدي جابر، محافظة الإسكندرية، مصر"><strong>عدمون فريمن،
+                                عزبة سعد، سيدي جابر</strong> بمحافظة
+                            الإسكندريه
+                            <span class="copy-button"
+                                data-text="عدمون فريمن، عزبة سعد، سيدي جابر، محافظة الإسكندرية، مصر"><i
+                                    class="copy-icon fas fa-copy"></i></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="email-form card-stlye animate" data-animate="animate-slide-top" id="contactForm">
+                <h1 class="animate" data-animate="animate-slide-top" data-translate="contact_title">
+                    <strong>لنبدأ الحديث حول مشروعك القادم</strong>
+                </h1>
+                <input class="z-index-1000 input-style animate" data-animate="animate-slide-top" type="text" name="name"
+                    placeholder="الإسم" data-translate="name_placeholder" required />
+                <div class="data-group">
+                    <input class="z-index-1000 input-style animate" data-animate="animate-slide-top" type="email"
+                        name="email" placeholder="البريد الإلكتروني" data-translate="email_placeholder" />
+                    <input style="text-align: right;" class="z-index-1000 input-style animate"
+                        data-animate="animate-slide-top" type="tel" name="phone" placeholder="رقم الهاتف"
+                        data-translate="phone_placeholder" />
+                </div>
+                <textarea class="z-index-1000 input-style animate" data-animate="animate-slide-top" name="message"
+                    placeholder="رسالتك" data-translate="message_placeholder" required></textarea>
+                <div class="btn-container">
+                    <button class="z-index-1000 btn-style animate" data-animate="animate-slide-top" type="submit"
+                        data-translate="send_button">ارسال</button>
+
+                </div>
+            </form>
+
+        </div>
+
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3412.360775302049!2d29.94445468485691!3d31.210732681473203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDEyJzM4LjYiTiAyOcKwNTYnMzIuMiJF!5e0!3m2!1sar!2seg!4v1749720293023!5m2!1sar!2seg"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4><strong>ديچيتالينا</strong></h4>
+                    <ul>
+                        <li> <a href="#homeSection" data-translate="home">الرئيسيه</a>
+                        </li>
+                        <li> <a href="#aboutSection" data-translate="about">عن الموقع</a>
+                        </li>
+                        <li> <a href="#servicesSection" data-translate="services">خدماتنا</a>
+                        </li>
+                        <li> <a href="#contactSection" data-translate="contact">اتصل بنا</a>
+                        </li>
+                        <li> <a href="#contactSection" data-translate="blogs">المدونه</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-translate="about"><strong>عن الموقع</strong></h4>
+                    <p data-translate="about_text">
+                        نحن <strong>وكالة تسويق رقمي</strong> ندمج بين <strong>الإبداع</strong>
+                        و<strong>الاستراتيجية</strong> لتمكين <strong>العلامات التجارية</strong> من <strong>النمو
+                            والتميّز الرقمي</strong>.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4><strong>تابعنا على منصات التواصل</strong></h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/people/DigitaLena/61574974755333/?rdid=I5IMLvzYilfmpU2l&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19HaUshQwr%2F"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=201067876296&text&type=phone_number&app_absent=0"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/digitalena0/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D# "
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/digitalena-agency/" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- <script defer src="/assets/js/translations.js"></script> -->
+    <script defer src="/main.js"></script>
+    <script defer src="/assets/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer>
+
+        // services
+        const services = [
+            {
+                id: 1,
+                name: "السوشيال ميديا",
+                shortDescription: "إدارة الحسابات وإنشاء محتوى جذاب على المنصات الاجتماعية.",
+                details: "ندير حساباتك على وسائل التواصل الاجتماعي من خلال إنشاء محتوى مخصص، وجدولة المنشورات، والرد على المتابعين، وتحليل الأداء لزيادة جمهورك.",
+                keywords: [
+                    "السوشيال ميديا",
+                    "التواصل الاجتماعي",
+                    "إدارة الحسابات",
+                    "إنشاء المحتوى",
+                    "فيسبوك",
+                    "إنستجرام",
+                    "تويتر",
+                    "المتابعين",
+                    "الإعلانات",
+                    "إعلانات ممولة",
+                    "تسويق رقمي",
+                    "المجتمع الرقمي",
+                    "نمو المتابعين"
+                ],
+                video: "/assets/images/services/social-media.mp4",
+                placeholder: "/assets/images/posters/social-media.png"
+            },
+            {
+                id: 2,
+                name: "شراء الإعلانات",
+                shortDescription: "إعلانات مدفوعة موجهة لتحقيق أقصى عائد استثماري.",
+                details: "ندير حملات الإعلانات على منصات مثل Meta وGoogle باحترافية لضمان استخدام الميزانية بكفاءة وتحقيق أفضل النتائج.",
+                keywords: [
+                    "شراء الإعلانات",
+                    "إدارة الإعلانات",
+                    "إعلانات ممولة",
+                    "فيسبوك أدز",
+                    "جوجل أدز",
+                    "عائد الاستثمار",
+                    "إعلانات رقمية",
+                    "حملات إعلانية",
+                    "استهداف",
+                    "ميزانية إعلانية",
+                    "أداء الحملات"
+                ],
+                video: "/assets/images/services/media-buying.mp4",
+                placeholder: "/assets/images/posters/media-buying.png"
+            },
+            {
+                id: 3,
+                name: "تحسين محركات البحث",
+                shortDescription: "رفع ترتيبك في نتائج البحث المجانية والمدفوعة.",
+                details: "نقدم خدمات SEO وSEM لزيادة ظهورك في محركات البحث من خلال استراتيجيات كلمات مفتاحية وتحليل الأداء لجذب المزيد من الزوار.",
+                keywords: [
+                    "تحسين محركات البحث",
+                    "سيو",
+                    "إعلانات البحث",
+                    "جوجل",
+                    "كلمات مفتاحية",
+                    "ترتيب البحث",
+                    "زيارات عضوية",
+                    "بحث مدفوع",
+                    "تحسين الأداء",
+                    "ظهور في نتائج البحث"
+                ],
+                video: "/assets/images/services/SEO-SEM.mp4",
+                placeholder: "/assets/images/posters/SEO-SEM.png"
+            },
+            {
+                id: 4,
+                name: "الإنتاج الإعلامي",
+                shortDescription: "فيديوهات وصور احترافية تعكس هوية علامتك.",
+                details: "ننتج فيديوهات ترويجية وإعلانات وصور منتجات عالية الجودة، من التصوير إلى المونتاج، لإبراز علامتك التجارية.",
+                keywords: [
+                    "إنتاج إعلامي",
+                    "تصوير فيديو",
+                    "تصوير منتجات",
+                    "مونتاج",
+                    "إعلانات",
+                    "محتوى بصري",
+                    "علامة تجارية",
+                    "خدمات إبداعية"
+                ],
+                video: "/assets/images/services/Media-Production.mp4",
+                placeholder: "/assets/images/posters/Media-Production.png"
+            },
+            {
+                id: 5,
+                name: "تصميم المواقع",
+                shortDescription: "تصميم وتطوير مواقع سريعة ومتجاوبة.",
+                details: "نقوم ببناء مواقع مخصصة حسب احتياجاتك، سواء مواقع شركات، متاجر إلكترونية، أو منصات خدمات، مع تصميم حديث وتجربة مستخدم رائعة.",
+                keywords: [
+                    "تصميم مواقع",
+                    "برمجة مواقع",
+                    "مواقع إلكترونية",
+                    "واجهة مستخدم",
+                    "UX",
+                    "UI",
+                    "مواقع متجاوبة",
+                    "تطوير ويب",
+                    "متاجر إلكترونية",
+                    "مواقع شركات"
+                ],
+                video: "/assets/images/services/websits.mp4",
+                placeholder: "/assets/images/posters/websits.png"
+            },
+            {
+                id: 6,
+                name: "تطبيقات الموبايل",
+                shortDescription: "تطوير تطبيقات مميزة وسريعة لأندرويد وiOS.",
+                details: "نصمم ونطور تطبيقات موبايل بأداء عالي وتجربة مستخدم سلسة لأنظمة أندرويد وiOS، مع دعم فني متكامل.",
+                keywords: [
+                    "تطبيقات موبايل",
+                    "تطبيقات أندرويد",
+                    "تطبيقات iOS",
+                    "تطوير تطبيقات",
+                    "تصميم تطبيقات",
+                    "تجربة مستخدم",
+                    "واجهة مستخدم",
+                    "برمجة موبايل",
+                    "دعم فني"
+                ],
+                video: "/assets/images/services/mobile-apps.mp4",
+                placeholder: "/assets/images/posters/mobile-apps.png"
+            },
+            {
+                id: 7,
+                name: "الرسوم ثلاثية الأبعاد",
+                shortDescription: "مشاهد واقعية باستخدام تقنيات CGI الحديثة.",
+                details: "نُنتج مشاهد CGI عالية الجودة للإعلانات والمنتجات والعروض المعمارية باستخدام أحدث تقنيات التصيير ثلاثي الأبعاد.",
+                keywords: [
+                    "CGI",
+                    "3D",
+                    "رسوم ثلاثية الأبعاد",
+                    "تصيير",
+                    "تصميم معماري",
+                    "مشاهد واقعية",
+                    "عرض منتجات",
+                    "جرافيكس"
+                ],
+                video: "/assets/images/services/CGI.mp4",
+                placeholder: "/assets/images/posters/CGI.png"
+            },
+            {
+                id: 8,
+                name: "تحريك ثنائي وثلاثي الأبعاد",
+                shortDescription: "رسوم متحركة إبداعية لعرض الخدمات والإعلانات.",
+                details: "نقدم خدمات تحريك 2D و3D للفيديوهات التوضيحية والإعلانات والعروض التفاعلية، بجودة بصرية عالية.",
+                keywords: [
+                    "رسوم متحركة",
+                    "تحريك ثنائي الأبعاد",
+                    "تحريك ثلاثي الأبعاد",
+                    "2D",
+                    "3D",
+                    "تصميم موشن",
+                    "جرافيك",
+                    "فيديو توضيحي",
+                    "عرض تفاعلي",
+                    "تأثيرات بصرية"
+                ],
+                video: "/assets/images/services/2D-3D.mp4",
+                placeholder: "/assets/images/posters/2D-3D.png"
+            }
+        ];
+
+
+        // load services
+
+        const container = document.getElementById("services-list");
+
+        // services.forEach(service => {
+        //     const card = document.createElement("div");
+        //     card.classList.add("swiper-slide", "service-card");
+        //     card.innerHTML = `
+        //     <div class="card-background">
+        //       <video autoplay muted loop playsinline class="card-background" poster ="${service.placeholder}" >
+        //         <source src="${service.video}" type="video/mp4" />
+        //       </video>
+        //     </div>
+        //     <div class="card-data">
+        //       <h3 class="card-name">${service.name}</h3>
+        //       <p class="card-description">${service.shortDescription}</p>
+        //       <a href="#" class="card-button" data-id="${service.id}">Read More</a>
+        //     </div>
+        //   `;
+        //     container.appendChild(card);
+        // });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const swiperCards = new Swiper('.services-container.swiper', {
+                loop: true,
+                grabCursor: true,
+                spaceBetween: 32,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-prev',
+                    prevEl: '.swiper-button-next',
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    }
+                }
+            });
+            // search for service 
+
+            const input = document.querySelector('.search-bar input');
+            const slides = document.querySelectorAll('.swiper-slide');
+
+            input.addEventListener('input', () => {
+                const query = input.value.trim().toLowerCase();
+
+                // إزالة الكلاسات القديمة
+                slides.forEach(slide => {
+                    slide.classList.remove('highlight', 'shake');
+                });
+
+                if (query === "") {
+                    swiperCards.slideToLoop(0);
+                    return;
+                }
+
+                let bestMatchIndex = -1;
+                let bestMatchScore = 0;
+
+                services.forEach((service, index) => {
+                    let score = 0;
+
+                    // نقاط أعلى لما الكلمة تظهر في الاسم
+                    if (service.name.toLowerCase().includes(query)) score += 10;
+
+                    // نقاط إضافية لو ظهرت في الوصف القصير
+                    if (service.shortDescription.toLowerCase().includes(query)) score += 5;
+
+                    // نقاط أقل لو ظهرت في التفاصيل الكاملة
+                    if (service.details.toLowerCase().includes(query)) score += 3;
+
+                    // نقاط لو الكلمة تطابق أو جزء منها في keywords
+                    service.keywords.forEach(keyword => {
+                        if (keyword.toLowerCase().includes(query)) {
+                            score += 7;
+                        }
+                    });
+
+                    if (score > bestMatchScore) {
+                        bestMatchScore = score;
+                        bestMatchIndex = index;
+                    }
+                });
+
+                if (bestMatchIndex !== -1) {
+                    const slide = slides[bestMatchIndex];
+
+                    // تحريك السلايدر للسلايد الأفضل
+                    swiperCards.slideToLoop(bestMatchIndex);
+
+                    // إضافة highlight و animation
+                    slide.classList.add('highlight', 'shake');
+                    slide.addEventListener('animationend', () => {
+                        slide.classList.remove('shake');
+                    }, { once: true });
+                } else {
+                    // لو مفيش تطابق، يرجع للسلايد الأول
+                    swiperCards.slideToLoop(0);
+                }
+            });
+
+
+        });
+
+        // read more function
+
+        const overlay = document.getElementById('service-overlay');
+        const overlayVideo = document.getElementById('overlay-video');
+        const overlayTitle = document.getElementById('overlay-title');
+        const overlayDetails = document.getElementById('overlay-details');
+        const overlayCloseBtn = document.getElementById('overlay-close-btn');
+
+        function openOverlay(serviceId) {
+            const service = services.find(s => s.id === +serviceId);
+            if (!service) return;
+            overlayVideo.poster = `${service.video}`;
+            overlayVideo.innerHTML = `<source src="${service.video}" type="video/mp4">`; // تحديث الفيديو
+            overlayVideo.load();
+            overlayTitle.textContent = service.name;
+            overlayDetails.textContent = service.details;
+
+            overlay.style.display = 'flex';
+        }
+
+        container.addEventListener('click', (e) => {
+            if (e.target.classList.contains('card-button')) {
+                e.preventDefault();
+                const id = e.target.getAttribute('data-id');
+                openOverlay(id);
+            }
+        });
+
+        overlayCloseBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            overlayVideo.pause();
+        });
+    </script>
+
+</body>
+
+</html>
