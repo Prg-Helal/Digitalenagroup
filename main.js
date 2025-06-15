@@ -4,6 +4,8 @@ hamburger = document.querySelector(".hamburger");
 hamburger.onclick = function () {
     navBar = document.querySelector(".navbar").classList.toggle("active");
     header = document.querySelector(".header").classList.toggle("active");
+    hamburger.classList.toggle('open');
+
 }
 
 //scroll to top 
@@ -43,7 +45,9 @@ for (const card of document.querySelectorAll(".Statistics-card")) {
     card.onmousemove = e => handleOnMouseMove(e);
 }
 
-document.querySelector(".about-card").onmousemove = e => handleOnMouseMove(e);
+for (const card of document.querySelectorAll(".about-card")) {
+    card.onmousemove = e => handleOnMouseMove(e);
+}
 
 // count numbers with scroll
 
@@ -83,7 +87,7 @@ const observer = new IntersectionObserver((entries, obeserver) => {
             observer.unobserve(entry.target);
         };
     })
-},{threshold:0.4})
+}, { threshold: 0.4 })
 
 document.querySelectorAll(".animate").forEach(section => {
     observer.observe(section);
@@ -108,3 +112,9 @@ document.querySelectorAll('.copy-button').forEach(btn => {
         }, 1000);
     });
 });
+
+// const hamburger = document.getElementById('hamburger');
+
+//     hamburger.addEventListener('click', () => {
+//         hamburger.classList.toggle('open');
+//     });

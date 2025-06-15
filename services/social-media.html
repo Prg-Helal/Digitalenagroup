@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | Digitalena</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <style>
+        /* Additional styles for service detail page */
+        .service-detail-section {
+            padding: 120px 20px 100px;
+            width: 95%;
+            margin: 0 auto;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .service-detail-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(61, 132, 255, 0.3) 1px, transparent 1px),
+                linear-gradient(to right, rgba(61, 132, 255, 0.2) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 0;
+            opacity: 0.2;
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-title {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to left, #3d84ff81, #3d84ffde);
+            filter: drop-shadow(0 0 10px #3d84ff5f);
+            text-shadow: 0 0 5px rgba(61, 131, 255, 0.2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .service-subtitle {
+            font-size: 1.8rem;
+            color: #3d83ff;
+            filter: drop-shadow(0 0 10px #3d84ffa6);
+            margin-bottom: 2rem;
+        }
+
+        .service-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-video-container {
+            flex: 1;
+            min-width: 300px;
+            border-radius: var(--border-radius-large);
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(61, 132, 255, 0.3);
+        }
+
+        .service-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-details {
+            flex: 1;
+            min-width: 300px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--border-radius-large);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.1px);
+            -webkit-backdrop-filter: blur(5.1px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-details::before {
+            background: radial-gradient(circle 800px at var(--mouse-x) var(--mouse-y), hsla(218, 100%, 62%, 0.1), transparent 40%);
+            border-radius: inherit;
+            content: "";
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .service-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: #ffffffdb;
+        }
+
+        .service-features {
+            margin-bottom: 2rem;
+        }
+
+        .features-title {
+            font-size: 1.5rem;
+            color: #3d83ff;
+            margin-bottom: 1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+
+        .features-list li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: #3d83ff;
+            position: absolute;
+            left: -1.5rem;
+            font-weight: bold;
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #3d84ffc2;
+            filter: drop-shadow(0 0 10px #3d84ffb9);
+            border-radius: 16px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: .3s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: rgba(61, 132, 255, 0.914);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(61, 132, 255, 0.4);
+        }
+
+        .cta-button:active {
+            background-color: rgba(61, 132, 255, 0.737);
+            transform: translateY(-1px);
+        }
+
+        .related-services {
+            margin-top: 5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .related-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #3d83ff;
+            filter: drop-shadow(0 0 10px #3d84ffa6);
+        }
+
+        .related-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .related-card {
+            width: 300px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--border-radius-medium);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.1px);
+            -webkit-backdrop-filter: blur(5.1px);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .related-card::before {
+            background: radial-gradient(circle 800px at var(--mouse-x) var(--mouse-y), hsla(218, 100%, 62%, 0.1), transparent 40%);
+            border-radius: inherit;
+            content: "";
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .related-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(61, 132, 255, 0.3);
+        }
+
+        .related-video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .related-content {
+            padding: 1.5rem;
+        }
+
+        .related-name {
+            font-size: 1.3rem;
+            color: #3d83ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-desc {
+            font-size: 0.95rem;
+            color: #ffffffcc;
+            margin-bottom: 1rem;
+        }
+
+        .related-link {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .related-link:hover {
+            color: #3d83ff;
+        }
+
+        @media (max-width: 768px) {
+            .service-title {
+                font-size: 2.5rem;
+            }
+
+            .service-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .related-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- scroll top  -->
+    <span class="up-icon-conatiner" id="scrollTop">
+        <i class="fa-solid fa-chevron-up up-icon"></i>
+    </span>
+
+    <!-- header -->
+    <header class="header animate" data-animate="animate-slide-down">
+        <!-- logo -->
+        <div class="logo-container">
+            <img src="../assets/images/Digitalena-logo.png" alt="Digitalena Logo" class="img-logo">
+        </div>
+
+        <!-- hamburger for responsive   -->
+        <div class="hamburger" id="hamburger">
+            <div class="line top"></div>
+            <div class="line middle"></div>
+            <div class="line bottom"></div>
+        </div>
+
+        <!-- navbar links -->
+        <nav class="navbar">
+            <ul class="links">
+                <a href="index.html#homeSection" class="nav-link" data-translate="home">Home</a>
+                <a href="index.html#aboutSection" class="nav-link" data-translate="about">About</a>
+                <a href="index.html#servicesSection" class="nav-link active-link" data-translate="services">Services</a>
+                <a href="index.html#contactSection" class="nav-link" data-translate="contact">Contact</a>
+                <a href="index.html#contactSection" class="nav-link" data-translate="blogs">Blogs</a>
+            </ul>
+
+            <!-- switch language links -->
+            <div class="language-switcher">
+                <a href="../services.ar/social-media.html" class="lang-btn">AR</a>
+                <a href="#" class="lang-btn active ">EN</a>
+                <i class="fa fa-globe global-icon" aria-hidden="true" onclick="toggleLanguageMenu()"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="service-detail-section">
+        <div class="service-header animate" data-animate="animate-slide-top">
+            <h1 class="service-title">Social Media Management</h1>
+            <p class="service-subtitle">Professional Management for Your Digital Presence</p>
+        </div>
+
+        <div class="service-content">
+            <div class="service-video-container animate" data-animate="animate-slide-right">
+                <video autoplay muted loop playsinline class="service-video"
+                    poster="../assets/images/posters/social-media.png">
+                    <source src="../assets/images/services/social-media.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="service-details animate" data-animate="animate-slide-left">
+                <p class="service-description">
+                    Our Social Media Management service provides comprehensive solutions to build and maintain your
+                    brand's online presence. We create engaging content, manage your social interactions, and develop
+                    strategies to increase your reach and engagement.
+                </p>
+
+                <p class="service-description">
+                    We specialize in creating customized social media strategies that align with your business goals,
+                    ensuring consistent brand messaging across all platforms while maximizing audience engagement and
+                    conversion rates.
+                </p>
+
+                <div class="service-features">
+                    <h3 class="features-title">Our Social Media Services Include:</h3>
+                    <ul class="features-list">
+                        <li>Custom content creation tailored to your brand</li>
+                        <li>Strategic posting schedule optimized for engagement</li>
+                        <li>Audience growth and community management</li>
+                        <li>Competitor analysis and market research</li>
+                        <li>Performance analytics and monthly reports</li>
+                        <li>Crisis management and reputation monitoring</li>
+                        <li>Influencer collaboration strategies</li>
+                        <li>Platform-specific campaign development</li>
+                    </ul>
+                </div>
+
+                <div class="cta-container">
+                    <button class="cta-button">Get Started with Social Media Management</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="related-services animate" data-animate="animate-slide-top">
+            <h2 class="related-title">Explore Our Other Services</h2>
+            <div class="related-cards">
+                <!-- Media Buying Card -->
+                <div class="related-card">
+                    <video autoplay muted loop playsinline class="related-video"
+                        poster="../assets/images/posters/media-buying.png">
+                        <source src="../assets/images/services/media-buying.mp4" type="video/mp4">
+                    </video>
+                    <div class="related-content">
+                        <h3 class="related-name">Media Buying</h3>
+                        <p class="related-desc">Strategic ad placement for maximum ROI across digital platforms.</p>
+                        <a href="service-media-buying.html" class="related-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- SEO/SEM Card -->
+                <div class="related-card">
+                    <video autoplay muted loop playsinline class="related-video"
+                        poster="../assets/images/posters/SEO-SEM.png">
+                        <source src="../assets/images/services/SEO-SEM.mp4" type="video/mp4">
+                    </video>
+                    <div class="related-content">
+                        <h3 class="related-name">Search Engine Optimization</h3>
+                        <p class="related-desc">Increase visibility and organic traffic with our SEO strategies.</p>
+                        <a href="service-seo.html" class="related-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Website Design Card -->
+                <div class="related-card">
+                    <video autoplay muted loop playsinline class="related-video"
+                        poster="../assets/images/posters/websits.png">
+                        <source src="../assets/images/services/websits.mp4" type="video/mp4">
+                    </video>
+                    <div class="related-content">
+                        <h3 class="related-name">Website Design</h3>
+                        <p class="related-desc">Responsive, SEO-optimized websites for optimal user experience.</p>
+                        <a href="service-website-design.html" class="related-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Digitalena</h4>
+                    <ul>
+                        <li> <a href="index.html#homeSection" data-translate="home">Home</a></li>
+                        <li> <a href="index.html#aboutSection" data-translate="about">About</a></li>
+                        <li> <a href="index.html#servicesSection" data-translate="services">Services</a></li>
+                        <li> <a href="index.html#contactSection" data-translate="contact">Contact</a></li>
+                        <li> <a href="index.html#contactSection" data-translate="blogs">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-translate="about">About Us</h4>
+                    <p data-translate="about_text">
+                        We are a stream of digital brilliance — merging creativity and strategy to empower brands and
+                        inspire audiences. Our vision is to lead the digital marketing scene in the Middle East and
+                        become the top destination for global brands, driven by imagination and innovation.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/people/DigitaLena/61574974755333/?rdid=I5IMLvzYilfmpU2l&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19HaUshQwr%2F"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=201067876296&text&type=phone_number&app_absent=0"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/digitalena0/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D# "
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/digitalena-agency/" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="../assets/js/all.js"></script>
+    <script>
+        // Scroll to top functionality
+        const scrollTop = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mouse move effect for cards
+        document.querySelectorAll('.service-details, .related-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate');
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 100) {
+                    const animation = element.getAttribute('data-animate');
+                    element.classList.add(animation);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+
+</html>

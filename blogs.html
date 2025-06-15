@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitalena Blog System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/blogs.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header animate" data-animate="animate-slide-down">
+
+        <!-- logo -->
+        <div class="logo-container">
+            <img src="assets/images/Digitalena-logo.png" alt="Digitalena Logo" class="img-logo">
+        </div>
+
+
+        <!-- hamburger for responsive   -->
+        <div class="hamburger" id="hamburger">
+            <div class="line top"></div>
+            <div class="line middle"></div>
+            <div class="line bottom"></div>
+        </div>
+
+        <!-- navbar links -->
+
+        <nav class="navbar">
+            <ul class="links">
+                <a href="#homeSection" class="nav-link active-link" data-translate="home">Home</a>
+                <a href="#aboutSection" class="nav-link" data-translate="about">About</a>
+                <a href="#servicesSection" class="nav-link" data-translate="services">Services</a>
+                <a href="#contactSection" class="nav-link" data-translate="contact">Contact</a>
+                <a href="#contactSection" class="nav-link" data-translate="blogs">Blogs</a>
+                <a href="#admin-login" class="nav-link" id="admin-link">Admin</a>
+            </ul>
+
+
+            <!-- switch language likns -->
+
+            <div class="language-switcher">
+                <a href="index.ar.html" class="lang-btn">AR</a>
+                <a href="#" class="lang-btn active ">EN</a>
+                <i class="fa fa-globe global-icon" aria-hidden="true" onclick="toggleLanguageMenu()"></i>
+            </div>
+
+        </nav>
+
+        </div>
+
+    </header>
+
+    <!-- Blog List Page -->
+    <section class="blog-section" id="blog-list">
+        <h2 class="section-title">Digitalena Insights</h2>
+
+        <div class="blog-grid">
+            <!-- Blog Card 1 -->
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Digital Marketing Trends" class="blog-thumbnail">
+                <div class="blog-content">
+                    <h3 class="blog-title">Top Digital Marketing Trends for 2023</h3>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> June 15, 2023</span>
+                        <span><i class="far fa-clock"></i> 5 min read</span>
+                    </div>
+                    <p class="blog-excerpt">Discover the latest trends shaping the digital marketing landscape this year
+                        and how your business can leverage them for growth.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Trends</span>
+                        <span class="tag">Strategy</span>
+                    </div>
+                    <a href="#blog-single" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="SEO Strategy" class="blog-thumbnail">
+                <div class="blog-content">
+                    <h3 class="blog-title">Mastering SEO: A Complete Guide</h3>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> May 28, 2023</span>
+                        <span><i class="far fa-clock"></i> 8 min read</span>
+                    </div>
+                    <p class="blog-excerpt">Learn how to optimize your website for search engines and drive organic
+                        traffic with our comprehensive SEO guide.</p>
+                    <div class="blog-tags">
+                        <span class="tag">SEO</span>
+                        <span class="tag">Optimization</span>
+                    </div>
+                    <a href="#blog-single" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80"
+                    alt="Social Media" class="blog-thumbnail">
+                <div class="blog-content">
+                    <h3 class="blog-title">Social Media Strategies That Convert</h3>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> May 10, 2023</span>
+                        <span><i class="far fa-clock"></i> 6 min read</span>
+                    </div>
+                    <p class="blog-excerpt">Transform your social media presence with these proven strategies that turn
+                        followers into customers.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Social Media</span>
+                        <span class="tag">Engagement</span>
+                    </div>
+                    <a href="#blog-single" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 4 -->
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80"
+                    alt="Analytics" class="blog-thumbnail">
+                <div class="blog-content">
+                    <h3 class="blog-title">Data-Driven Marketing Decisions</h3>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> April 22, 2023</span>
+                        <span><i class="far fa-clock"></i> 7 min read</span>
+                    </div>
+                    <p class="blog-excerpt">Learn how to leverage analytics to make informed marketing decisions that
+                        drive real business results.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Analytics</span>
+                        <span class="tag">Data</span>
+                    </div>
+                    <a href="#blog-single" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 5 -->
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Content Strategy" class="blog-thumbnail">
+                <div class="blog-content">
+                    <h3 class="blog-title">Content is King: Creating Engaging Material</h3>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> April 5, 2023</span>
+                        <span><i class="far fa-clock"></i> 9 min read</span>
+                    </div>
+                    <p class="blog-excerpt">Discover the secrets to creating content that captures attention, engages
+                        your audience, and drives conversions.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Content</span>
+                        <span class="tag">Strategy</span>
+                    </div>
+                    <a href="#blog-single" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 6 -->
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Email Marketing" class="blog-thumbnail">
+                <div class="blog-content">
+                    <h3 class="blog-title">Email Marketing in the Modern Era</h3>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> March 18, 2023</span>
+                        <span><i class="far fa-clock"></i> 6 min read</span>
+                    </div>
+                    <p class="blog-excerpt">Revolutionize your email marketing approach with these cutting-edge
+                        techniques for higher open and click-through rates.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Email</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                    <a href="#blog-single" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single Blog Page -->
+    <section class="blog-section" id="blog-single" style="display: none;">
+        <div class="blog-post-container">
+            <div class="post-header">
+                <h1 class="post-title">Top Digital Marketing Trends for 2023</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Alex Johnson</span>
+                    <span><i class="far fa-calendar"></i> June 15, 2023</span>
+                    <span><i class="far fa-clock"></i> 5 min read</span>
+                </div>
+                <div class="blog-tags">
+                    <span class="tag">Trends</span>
+                    <span class="tag">Strategy</span>
+                    <span class="tag">Marketing</span>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Digital Marketing Trends" style="width: 100%;">
+
+            <div class="post-content">
+                <p>The digital marketing landscape is constantly evolving, and staying ahead of the curve is essential
+                    for businesses looking to maintain a competitive edge. As we navigate through 2023, several key
+                    trends are shaping how brands connect with their audiences.</p>
+
+                <h3>1. AI-Powered Personalization</h3>
+                <p>Artificial Intelligence has moved beyond buzzword status to become an essential tool for marketers.
+                    AI algorithms can analyze vast amounts of customer data to deliver hyper-personalized experiences.
+                    From product recommendations to personalized email campaigns, AI enables brands to create unique
+                    experiences at scale.</p>
+
+                <h3>2. Voice Search Optimization</h3>
+                <p>With the growing popularity of smart speakers and voice assistants, optimizing for voice search is no
+                    longer optional. Voice search queries tend to be longer and more conversational than text-based
+                    searches, requiring a shift in SEO strategy. Brands that adapt their content to answer natural
+                    language questions will capture this growing segment.</p>
+
+                <h3>3. Video Continues to Dominate</h3>
+                <p>Video content remains the king of engagement. Short-form videos on platforms like TikTok and
+                    Instagram Reels are driving unprecedented engagement rates. Live streaming is also gaining traction
+                    as a way to build authentic connections with audiences. Brands should focus on creating authentic,
+                    valuable video content rather than overly produced commercials.</p>
+
+                <h3>4. Sustainability as a Marketing Strategy</h3>
+                <p>Consumers are increasingly making purchasing decisions based on a brand's environmental and social
+                    impact. Authentic sustainability initiatives, when communicated effectively, can be a powerful
+                    differentiator. Greenwashing, however, is easily detected and can damage brand reputation.</p>
+
+                <h3>5. Privacy-First Marketing</h3>
+                <p>With increasing privacy regulations and browser restrictions on third-party cookies, marketers need
+                    to rethink their data collection strategies. First-party data collection through value exchanges
+                    (like newsletters or loyalty programs) is becoming crucial. Contextual advertising is making a
+                    comeback as an alternative to behavioral targeting.</p>
+
+                <p>These trends represent significant opportunities for brands that are willing to adapt. The key to
+                    success in 2023 will be agility, authenticity, and a relentless focus on delivering value to
+                    customers.</p>
+            </div>
+
+            <div class="related-posts">
+                <h3 class="related-title">Related Articles</h3>
+                <div class="blog-grid">
+                    <div class="blog-card animate" data-animate="animate-slide-top" >
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="SEO Strategy" class="blog-thumbnail">
+                        <div class="blog-content">
+                            <h3 class="blog-title">Mastering SEO: A Complete Guide</h3>
+                            <a href="#blog-single" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Marketing Automation" class="blog-thumbnail">
+                        <div class="blog-content">
+                            <h3 class="blog-title">The Power of Marketing Automation</h3>
+                            <a href="#blog-single" class="read-more-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Login -->
+    <section class="admin-container" id="admin-login" style="display: none;">
+        <div class="admin-card">
+            <h2 class="admin-title">Admin Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Admin Dashboard -->
+    <section class="dashboard" id="admin-dashboard" style="display: none;">
+        <div class="admin-header">
+            <h2 class="admin-title">Blog Management</h2>
+            <a href="#add-blog" class="add-blog-btn"><i class="fas fa-plus"></i> Add New Blog</a>
+        </div>
+
+        <table class="posts-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Top Digital Marketing Trends for 2023</td>
+                    <td>Jun 15, 2023</td>
+                    <td>Published</td>
+                    <td>
+                        <a href="#edit-blog" class="action-btn edit-btn"><i class="fas fa-edit"></i> Edit</a>
+                        <a href="#" class="action-btn delete-btn"><i class="fas fa-trash"></i> Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mastering SEO: A Complete Guide</td>
+                    <td>May 28, 2023</td>
+                    <td>Published</td>
+                    <td>
+                        <a href="#edit-blog" class="action-btn edit-btn"><i class="fas fa-edit"></i> Edit</a>
+                        <a href="#" class="action-btn delete-btn"><i class="fas fa-trash"></i> Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Social Media Strategies That Convert</td>
+                    <td>May 10, 2023</td>
+                    <td>Published</td>
+                    <td>
+                        <a href="#edit-blog" class="action-btn edit-btn"><i class="fas fa-edit"></i> Edit</a>
+                        <a href="#" class="action-btn delete-btn"><i class="fas fa-trash"></i> Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Data-Driven Marketing Decisions</td>
+                    <td>Apr 22, 2023</td>
+                    <td>Draft</td>
+                    <td>
+                        <a href="#edit-blog" class="action-btn edit-btn"><i class="fas fa-edit"></i> Edit</a>
+                        <a href="#" class="action-btn delete-btn"><i class="fas fa-trash"></i> Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Add/Edit Blog -->
+    <section class="dashboard" id="add-blog" style="display: none;">
+        <div class="admin-header">
+            <h2 class="admin-title">Add New Blog Post</h2>
+            <a href="#admin-dashboard" class="add-blog-btn"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+        </div>
+
+        <form id="blog-form">
+            <div class="form-group">
+                <label class="form-label">Blog Title</label>
+                <input type="text" class="form-input" placeholder="Enter blog title" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Featured Image</label>
+                <div class="image-upload">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Click to upload or drag and drop</p>
+                    <p>PNG, JPG (Max. 2MB)</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Blog Content</label>
+                <div class="editor-container">
+                    <p>Rich text editor would appear here...</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Tags</label>
+                <div class="tag-input">
+                    <input type="text" class="form-input" placeholder="Add tags (press enter to add)">
+                </div>
+                <div class="tag-preview">
+                    <span>Marketing <i class="fas fa-times"></i></span>
+                    <span>Trends <i class="fas fa-times"></i></span>
+                    <span>2023 <i class="fas fa-times"></i></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Publish Date</label>
+                <input type="date" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Status</label>
+                <select class="form-input">
+                    <option>Draft</option>
+                    <option>Published</option>
+                </select>
+            </div>
+
+            <button type="submit" class="login-btn">Save Blog Post</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Digitalena</h4>
+                    <ul>
+                        <li> <a href="#homeSection" data-translate="home">Home</a>
+                        </li>
+                        <li> <a href="#aboutSection" data-translate="about">About</a>
+                        </li>
+                        <li> <a href="#servicesSection" data-translate="services">Services</a>
+                        </li>
+                        <li> <a href="#contactSection" data-translate="contact">Contact</a>
+                        </li>
+                        <li> <a href="#contactSection" data-translate="blogs">Blogs</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-translate="about">About Us</h4>
+                    <p data-translate="about_text">
+                        We are a stream of digital brilliance — merging creativity and strategy to empower brands and
+                        inspire audiences. Our vision is to lead the digital marketing scene in the Middle East and
+                        become the top destination for global brands, driven by imagination and innovation.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/people/DigitaLena/61574974755333/?rdid=I5IMLvzYilfmpU2l&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19HaUshQwr%2F"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=201067876296&text&type=phone_number&app_absent=0"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/digitalena0/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D# "
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/digitalena-agency/" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page navigation simulation
+        document.addEventListener('DOMContentLoaded', function () {
+            // Show blog list by default
+            document.getElementById('blog-list').style.display = 'block';
+
+            // Navigation simulation
+            document.querySelectorAll('.read-more-btn, .edit-btn, .add-blog-btn').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Hide all sections
+                    document.querySelectorAll('.blog-section, .admin-container, .dashboard').forEach(section => {
+                        section.style.display = 'none';
+                    });
+
+                    // Show target section
+                    const target = this.getAttribute('href').substring(1);
+                    document.getElementById(target).style.display = 'block';
+
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                });
+            });
+
+            // Login form simulation
+            document.getElementById('login-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Hide login, show dashboard
+                document.getElementById('admin-login').style.display = 'none';
+                document.getElementById('admin-dashboard').style.display = 'block';
+            });
+
+            // Blog card hover effect
+            document.querySelectorAll('.blog-card').forEach(card => {
+                card.addEventListener('mousemove', function (e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    this.style.setProperty('--mouse-x', `${x}px`);
+                    this.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
